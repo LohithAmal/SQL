@@ -93,5 +93,87 @@
 
   * As a user, I can cast a vote for a candidate.
 
-  
+  * check **mysql --version** and confirm mysql is dowloaded and running good if so we will get this,
+  ![](images/sqlr.JPG)
+  or and error message.
+
+  # what is database , table and query
+  * **database** is a collection of interrelated data. This data is stored in one or more tables that are related to one another.
+  *  **table** is composed of rows and columns. A column represents a field. A row represents a record.
+  * **query** is a request for data from a database table or a combination of tables.
+
+  * we will create a database first and the reason why we create a database first because database will at as a parent container that will store the interrelated tables of data.
+
+  * to start MySQL shell
+  type **mysql -u root -p** on the terminal.
+  * **mysql>** command shows that we are in sql shell.
+  * Now we create election database typing
+  **CREATE DATABASE election;** 
+  * to use the database tyoe **USE election;**
+
+# create candidate table using the MySQL CLI
+
+````
+CREATE TABLE candidates (
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  industry_connected BOOLEAN NOT NULL
+);
+````
+* **DESCRIBE candidate;** can see the candidate table created.
+
+* add data to table
+````
+INSERT INTO candidates (first_name, last_name, industry_connected)
+VALUES ('Ronald', 'Firbank', 1);
+
+`````
+* type **SELECT * FROM candidates;** 
+
+
+![](images/ad.JPG)
+
+* Insert data
+````
+INSERT INTO candidates (first_name, last_name, industry_connected)
+VALUES
+  ('Virginia', 'Woolf', 1),
+  ('Piers', 'Gaveston', 0),
+  ('Charles', 'LeRoi', 1),
+  ('Katherine', 'Mansfield', 1),
+  ('Dora', 'Carrington', 0),
+  ('Edward', 'Bellamy', 0),
+  ('Montague', 'Summers', 1),
+  ('Octavia', 'Butler', 1),
+  ('Unica', 'Zurn', 1);
+
+  ````
+
+
+* type **SELECT * FROM candidates;**
+
+![](images/aa.JPG)
+
+
+* SELECT first_name, last_name FROM candidates;
+![](images/ab.JPG)
+
+
+*  SELECT first_name, industry_connected
+FROM candidates
+WHERE industry_connected = 1;
+
+
+![](images/ac.JPG)
+
+
+* [WHERE clause](https://dev.mysql.com/doc/refman/8.0/en/comparison-operators.html): is a powerful filtering tool that can be used with equality operators like less than (<) or not equal to (!=). We can also use the OR and AND logical operators to evaluate multiple conditions. If the expression evaluates to true, the row is returned.
+
+# Save queries in schema and seed files
+* we will create files for database and table creation called **dq.sql** and **schema.sql**
+* and use these files to create and populate the **candidate** table.
+* 
+
+
 
