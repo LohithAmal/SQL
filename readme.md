@@ -173,7 +173,56 @@ WHERE industry_connected = 1;
 # Save queries in schema and seed files
 * we will create files for database and table creation called **dq.sql** and **schema.sql**
 * and use these files to create and populate the **candidate** table.
-* 
+
+* to delete database **DROP DATABASE election;**
+
+* we have now deleted the election database and added new database election in db/db.sql noe to create database on the file type:
+````
+source db/db.sql
+````
+* to verify tyoe **DESCRIBE candidates;**
+
+* added table details to seed.sql file
+````
+INSERT INTO candidates (first_name, last_name, industry_connected)
+VALUES
+  ('Ronald', 'Firbank', 1),
+  ('Virginia', 'Woolf', 1),
+  ('Piers', 'Gaveston', 0),
+  ('Charles', 'LeRoi', 1),
+  ('Katherine', 'Mansfield', 1),
+  ('Dora', 'Carrington', 0),
+  ('Edward', 'Bellamy', 0),
+  ('Montague', 'Summers', 1),
+  ('Octavia', 'Butler', 1),
+  ('Unica', 'Zurn', 1);
+
+  ````
+  * **source db/seeds.sql** to source the file
+  * **SELECT * FROM candidates;** to see newly created table.
+
+  * we use **UPDATE** command to uodate the table
+  ````
+  UPDATE candidates
+SET industry_connected = 1
+WHERE id = 3;
+````
+![](images/ae.JPG)
+
+* **DELETE** command:
+ ````
+ DELETE FROM candidates
+WHERE first_name = "Montague";
+````
+![](images/af.JPG)
+
+* see row deleted including id, in SQL database each row has its own unique ID.
+
+* can use **quit** command in terminal to end and get out of SQL shell.
+
+
+
+
 
 
 
