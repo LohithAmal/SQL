@@ -4,7 +4,7 @@
   "description": "this is a SQL practice project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js"
   },
   "repository": {
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/LohithAmal/SQL/issues"
   },
-  "homepage": "https://github.com/LohithAmal/SQL#readme"
+  "homepage": "https://github.com/LohithAmal/SQL#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.1.1",
+    "mysql2": "^2.3.0"
+  }
 }

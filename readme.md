@@ -245,6 +245,35 @@ WHERE first_name = "Montague";
 * Test the API endpoint using Insomnia Core And the Browser.
 
 
+* install **npm install express mysql2**
+* we've installed the express and mysql2 packages. We used the express package previously; now we'll use it to build the routes. The mysql2 package, which we haven't used before, will enable us to connect to the MySQL database and execute the SQL commands on the database.
+
+* also install jest by typing **npm i jest --save--dev**
+*  **npm test**
+
+## set up MySQL 
+* **mysql -u root -p**
+
+* **SHOW DATABASE;**
+
+![](images/ag.JPG)
+
+* **USE ELECTION;**
+
+![](images/ah.JPG)
+
+* **SHOW TABLES;**
+
+![](images/ai.JPG)
+
+* **USE election;**
+
+* **SELECT * FROM candidates;**
+
+![](images/aj.JPG)
+
+
+
 
 
 
