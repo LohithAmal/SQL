@@ -220,6 +220,31 @@ WHERE first_name = "Montague";
 
 * can use **quit** command in terminal to end and get out of SQL shell.
 
+# until now what learned 
+
+* Use MySQL to create a database and load the table with data.
+
+* Execute CRUD operations.
+
+* Delete a database and create tables of data from the command line, using db.sql, schema.sql, and seeds.sql files.
+
+
+# how a client to server communication work
+
+* The client makes a request to the server 
+* The server fulfills the request by doing something 
+  - makes API calls
+  - write information to a database
+  - Retrieve information from a database
+* The server sends a response to the client in JSON format.
+
+# this section will
+
+* Connect to MySQL database with Node.js application
+* Execute SQL Queries in the Express.js routes using MySQL methods.
+* Test the API endpoint using Insomnia Core And the Browser.
+
+
 
 
 
