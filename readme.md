@@ -4,6 +4,49 @@
 * **little history**: SQL has remained popular since its creation in 1970. Through numerous generations of technology, many enterprise applications have entrenched themselves in SQL databases due to their centralized security, scalability, and ability to handle numerous concurrent requests. As one of the most sought-after skills by recruiters, SQL is a powerful language that's used in a majority of databases in every economic sector, from manufacturing, logistics, and health care to insurance, commerce, and much more.
 
 ![](images/sql.JPG)
+# commands used
+* mysql -u root -p : on terminal to open thr MySQL shell
+* CREATE DATABASE databasename; to create database
+* USE databasename; e must select the database so that any tables we create will be associated with that database.
+* create table using sql CLI
+````
+CREATE TABLE tablename(
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  true_false BOOLEAN NOT NULL
+);
+````
+* DESCRIBE tablename; to see if the table is succesfully created or not
+* this code will load data into table,
+````
+INSERT INTO table name(first_name, last_name, true_false)
+VALUES ('name', 'lastname', 1);
+
+````
+
+* SELECT * FROM candidates; to see the table now created.
+
+* to add values to the table: 
+```
+INSERT INTO candidates (first_name, last_name, industry_connected)
+VALUES
+  ('Virginia', 'Woolf', 1),
+  ('Piers', 'Gaveston', 0),
+  ('Charles', 'LeRoi', 1),
+  ('Katherine', 'Mansfield', 1),
+  ('Dora', 'Carrington', 0),
+  ('Edward', 'Bellamy', 0),
+  ('Montague', 'Summers', 1),
+  ('Octavia', 'Butler', 1),
+  ('Unica', 'Zurn', 1);
+  
+  `````
+
+  * SELECT first_name, last_name FROM tablename; **FROM**
+  * SELECT first_name, industry_connected
+FROM candidates
+WHERE industry_connected = 1;  **WHERE**
 
 # WHAT I LEARNED FROM THIS MODULE
 
